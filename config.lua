@@ -10,11 +10,7 @@ QBConfig.Money.MoneyTypes = { cash = 500, bank = 5000, crypto = 0 } -- type = st
 QBConfig.Money.DontAllowMinus = { 'cash', 'crypto' }                -- Money that is not allowed going in minus
 QBConfig.Money.PayCheckTimeOut = 10                                 -- The time in minutes that it will give the paycheck
 QBConfig.Money.PayCheckSociety = false                              -- If true paycheck will come from the society account that the player is employed at, requires qb-management
-QBConfig.Money.Tax = {
-    ['Vehicle'] = 12, -- +12% of the price
-    ['Goods'] = 3, -- +3% of the price
-    ['Fuel'] = 5, -- +5% of the price
-}
+QBConfig.Money.CurrencyPrefix = '$'                                 -- For example. $ for USD - The price will be in the foreground
 
 QBConfig.Player = {}
 QBConfig.Player.HungerRate = 4.2 -- Rate at which hunger goes down.
@@ -33,6 +29,7 @@ QBConfig.Server.PVP = true                              -- Enable or disable pvp
 QBConfig.Server.Discord = ''                            -- Discord invite link
 QBConfig.Server.CheckDuplicateLicense = true            -- Check for duplicate rockstar license on join
 QBConfig.Server.Permissions = { 'god', 'admin', 'mod' } -- Add as many groups as you want here after creating them in your server.cfg
+QBConfig.Server.Name = 'QBCore Framework Server'        -- The server name can be used from anywhere
 
 QBConfig.Commands = {}                                  -- Command Configuration
 QBConfig.Commands.OOCColor = { 255, 151, 133 }          -- RGB color code for the OOC command
@@ -51,19 +48,15 @@ QBConfig.Notify.NotificationStyling = {
 QBConfig.Notify.VariantDefinitions = {
     success = {
         classes = 'success',
-        icon = 'check_circle'
+        icon = 'task_alt'
     },
     primary = {
         classes = 'primary',
         icon = 'notifications'
     },
-    warning = {
-        classes = 'warning',
-        icon = 'warning'
-    },
     error = {
         classes = 'error',
-        icon = 'error'
+        icon = 'warning'
     },
     police = {
         classes = 'police',
